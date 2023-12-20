@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpeakToTrnslate">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttomlinear"
+       />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/buttomlinear"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:cardElevation="35dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="30"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:background="#17000000"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="30"
+                >
+
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/english_voive"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/microphonem"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="English"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="7dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/t5"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="40"
+                >
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_autoPlay="false"
+                    app:lottie_loop="true"
+                    android:padding="10dp"
+                    app:lottie_rawRes="@raw/change_language" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="30"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/bagla_voice"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/microphonem"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Bangla"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="7dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/t5"
+                    />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</RelativeLayout>
